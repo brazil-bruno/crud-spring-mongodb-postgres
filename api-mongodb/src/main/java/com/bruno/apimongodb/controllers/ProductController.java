@@ -27,4 +27,10 @@ public class ProductController {
     public Product newProduct(@RequestBody Product productRequest) {
         return productService.newProduct(productRequest);
     }
+
+    @DeleteMapping(value = "/delete/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteProduct(@PathVariable(name = "id") String _id) {
+        productService.deleteProduct(_id);
+    }
 }
