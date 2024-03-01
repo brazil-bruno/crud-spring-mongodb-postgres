@@ -18,3 +18,14 @@
 .form-title {
     color: gray;
 }
+
+.btn-table {
+    margin-right: 5px;
+}
+.table-container {
+    max-width: 70%;
+    margin: auto;
+    margin-top: 15px;
+    padding: 0 60px 0 60px;
+    text-align: center;
+}
