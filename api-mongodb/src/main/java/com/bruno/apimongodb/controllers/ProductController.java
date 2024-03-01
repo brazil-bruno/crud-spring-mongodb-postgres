@@ -33,4 +33,16 @@ public class ProductController {
     public void deleteProduct(@PathVariable(name = "id") String _id) {
         productService.deleteProduct(_id);
     }
+
+    @GetMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Product findProductById(@PathVariable(name = "id") String id) {
+        return productService.findProductById(id);
+    }
+
+    @PutMapping(value = "/update/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Product updateProduct(@PathVariable(name = "id") String _id, @RequestBody Product product) {
+        return productService.updateProduct(_id, product);
+    }
 }
