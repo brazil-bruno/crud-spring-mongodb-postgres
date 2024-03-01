@@ -18,4 +18,14 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+    public Product newProduct(Product productRequest) {
+        Product product = Product.builder()
+                .name(productRequest.getName())
+                .description(productRequest.getDescription())
+                .price(productRequest.getPrice())
+                .build();
+
+        return productRepository.save(product);
+    }
+
 }
